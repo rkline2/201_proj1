@@ -1,0 +1,147 @@
+"""
+File: design1.txt
+Author: Rooklyn Kline
+Date: 10/18/19
+Section: 15
+E-mail: rkline2@umbc.edu
+Description:
+   This program is a baking sim where each player has to
+bake baguettes, macarons, and croissants. They must go to
+the grocery store to purchase ingredients. If they don't have enough
+ingredients or they go over budget, they automatically loose the game.
+"""
+
+STARTING_FUNDS = 80.0
+FLOUR_COST_PER_BAG = 2.5
+EGGS_COST_PER_CRATE = 1.9
+YEAST_COST_PER_BAG = 3.25
+BUTTER_COST_PER_PACK = 1.25
+MILK_COST_PER_JUG = 2.75
+GALLONS_MILK_PER_JUG = 1.0
+EGGS_PER_CRATE = 24.0
+TBSP_BUTTER_PER_PACK = 64.0
+CUPS_FLOUR_PER_BAG = 25.0
+CUP_YEAST_PER_BAG = 6.0
+FLOUR_REQUIRED = 48.0 + 112.5
+EGGS_REQUIRED = 12.0 + 60.0
+BUTTER_REQUIRED = 144.0
+YEAST_REQUIRED = 39 + 50
+MILK_REQUIRED = 18.0
+CUPS_IN_GALLON = 16
+TSP_IN_CUP = 48
+
+CROISSANTS_QUANTITY = 300
+MACARONS_QUANTITY = 600
+BAGUETTES_QUANTITY = 100
+INDENT = ""
+INTRO = "Baker! You must buy the following with $" + str(int(STARTING_FUNDS))+":"
+ING_INTRO = "For"
+COLON = ":"
+DISHES_LIST = ["croissants", "macarons", "baguettes"]
+CROISSANTS = 0
+MACARONS = 1
+BAGUETTES = 2
+INGREDIENTS_DESCRIPTION_LIST = ["cups of flour", "eggs", "tbsp of butter", "tsp of yeast", "cups of milk"]
+DISHES_QUANTITY = [300, 600, 100]
+CROISSANTS_ING_QUANTITY_LIST = [48, 12, 144, 39, 18]
+MACARONS_ING_QUANTITY_LIST = [0, 60, 0, 0, 0]
+BAGUETTES_ING_QUANTITY_LIST = [112.5, 0, 0, 50, 0]
+
+BAKE_INTRODUCTION = "We have everything we need! Ready! Set! Bake!"
+DASH = '  -  '
+NUMBER_LIST = [1, 2, 3, 4]
+BAGUETTES_NOT_FIRST = "We should really start the baguette dough first!"
+BAKE_QUESTION = "What action would you like to cross off your list next? "
+QUESTION_LIST = ["Begin the baguette dough", "Make the macarons", "make the croissants", "bake the baguettes"]
+
+INVALID_ENTRY = "That is not a valid entry."
+
+FAILURE = "You did not buy enough ingredients to even begin baking. You are a failure of all sorts. Good day."
+
+INGREDIENTS = ['flour','eggs','butter','yeast','milk']
+NOTHING = 'NOTHING'
+BUTTER = 'butter'
+GREETING = "Welcome to the supermarket!"
+PURCHASE_QUESTION = 'What would you like to purchase (ENTER "NOTHING" to leave store) '
+INGREDIENT_DESCRIPTION = ["bags", "crates", "packs", "bags", "jugs"]
+INDENT = ""
+INVALID_ENTRY = "That is not a valid entry."
+ASK_QUANTITY_QUESTION = ["How many "," of "," would you like to purchase? "]
+QUANTITY_QUESTION_PART_ONE = 0
+QUANTITY_QUESTION_PART_TWO = 1
+QUANTITY_QUESTION_PART_THREE = 2
+OVERSPENT = "You ran out of money!"
+WINNER = "All done!  Let's hope we've PRUEven ourselves worthy."
+WRONG_BAKING_RESPONSE = "Whoa, we should probably do everything else first!"
+
+
+[Functions]
+
+
+def print_shopping_list():
+    """
+    Prints the ingredients that are required for the user to purchase as well as its budget.
+    :param: none
+    :return: none
+    """
+
+
+def nowhitespace(input_response):
+    """
+    This function removes all of the white spaces of any statement
+    :param input_response: The word you would like to remove all of the white spaces from
+    :return: the parameter as a single word
+    """
+
+
+def go_shopping(STARTING_FUNDS):
+    """
+    This function will ask the user what they would like to purchase.
+    It will also ask for the quantity of the specific item and record it
+    :param STARTING_FUNDS: represents the amount you have to spend
+    :return: one list that contains the ingredients amount in a sublist
+    """
+
+
+def check_items_enough(shopping_cart):
+    """
+    A function that will determine if the user has enough ingredients. If they
+    do not, then it will print out how much they still need
+    :param shopping_cart: A list of all of the imputed values
+    :return: returns false if they don't have enough in ingredients. Returns true if the user does have enough
+    ingredients
+    """
+
+
+def print_task_list(tasks_remaining):
+    """
+    prints the tasks that are remaining for the user to do
+    :param tasks_remaining: a list of the menu options
+    :return: none
+    """
+
+
+def is_valid_input(index, tasks):
+    """
+    determines whether the index is valid given the list of supplied tasks
+    :param index: represents the length of the list
+    :param tasks: represents the list of the task values
+    :return: true if the index is valid and false if index is not valid
+    """
+
+
+def bake():
+    """
+    presents the user with a list of tasks
+    and asks to perform them in the correct order
+    :param: none
+    :return: none
+    """
+
+
+if __name__ == "__main__":
+   * call the print_shopping_list() function
+   * call the go_shopping() function within the check_items()
+     function check_items_enough(go_shopping(STARTING_FUNDS))
+   * if the previous statement is true, then it will call the bake() function
+     otherwise the program will end
